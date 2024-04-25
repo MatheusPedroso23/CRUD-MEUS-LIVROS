@@ -51,6 +51,7 @@
             this.dgvLivros.RowTemplate.Height = 24;
             this.dgvLivros.Size = new System.Drawing.Size(1390, 442);
             this.dgvLivros.TabIndex = 0;
+            this.dgvLivros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLivros_CellContentClick);
             // 
             // btnAlterar
             // 
@@ -158,6 +159,7 @@
             this.btnImprimir.TabIndex = 7;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // Form1
             // 

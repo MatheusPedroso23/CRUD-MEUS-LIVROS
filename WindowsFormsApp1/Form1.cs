@@ -120,5 +120,41 @@ namespace WindowsFormsApp1
                 ConfigurarGradeLivros();
             }
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            var dt = GerarDadosRelatorio();
+            using(var frm = new FrmLivrosRelatorio(dt))
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private DataTable GerarDadosRelatorio()
+        {
+            var dt = new DataTable();
+            dt.Columns.Add("isbn");
+            dt.Columns.Add("titulo");
+            dt.Columns.Add("autores");
+            dt.Columns.Add("unitario", typeof(decimal));
+
+            foreach (DataGridViewRow row in dgvLivros.Rows)
+            {
+                 string isbn = row.Cells["isbn"].Value.ToString();
+                 string titulo = row.Cells["titulo"].Value.ToString();
+                 string autores = row.Cells["autores"].Value.ToString();
+                 decimal unitario = Convert.ToDecimal(row.Cells["unitario"].Value);
+
+                dt.Rows.Add(isbn, titulo, autores, unitario);
+            }
+
+            return dt;
+        }
+
+
+        private void dgvLivros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
