@@ -44,12 +44,12 @@
             this.dgvLivros.AllowUserToAddRows = false;
             this.dgvLivros.AllowUserToDeleteRows = false;
             this.dgvLivros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLivros.Location = new System.Drawing.Point(2, 197);
+            this.dgvLivros.Location = new System.Drawing.Point(12, 197);
             this.dgvLivros.Name = "dgvLivros";
             this.dgvLivros.ReadOnly = true;
             this.dgvLivros.RowHeadersWidth = 51;
             this.dgvLivros.RowTemplate.Height = 24;
-            this.dgvLivros.Size = new System.Drawing.Size(1390, 442);
+            this.dgvLivros.Size = new System.Drawing.Size(1714, 532);
             this.dgvLivros.TabIndex = 0;
             this.dgvLivros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLivros_CellContentClick);
             // 
@@ -165,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1402, 647);
+            this.ClientSize = new System.Drawing.Size(1738, 741);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnExcluir);

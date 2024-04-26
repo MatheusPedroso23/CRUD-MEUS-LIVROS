@@ -124,7 +124,7 @@ namespace WindowsFormsApp1
         private void btnImprimir_Click(object sender, EventArgs e)
         {
             var dt = GerarDadosRelatorio();
-            using(var frm = new FrmLivrosRelatorio(dt))
+            using(var frm = new FrmLivrosRelatorio(dt, txtProcurar.Text))
             {
                 frm.ShowDialog();
             }
